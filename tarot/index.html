@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <title>Document</title>
 </head>
 
 <body>
+    <video autoplay="true" loop="true" muted="true" id="video_background">
+  <source src="imagenes/stars.mp4" type="video/mp4" />
+</video/>
     <div class="contenedor">
         <div class="contenedorTexto">
             <div class="texto">
                 <h1>Tirá tu carta</h1>
-                <p>Presioná el botón para tirar una carta de tarot y saber más de vos.</p>
             </div>    
             <div class="boton">
                 <button class="btn" onclick="cargarCartas()">Tirar Carta</button>
@@ -21,10 +24,13 @@
         </div>
         
         <div id="contenedorCarta">
+            
             <img src="imagenes/carta-tarot-predeterminada.webp" alt="" class="cartaImagen2">
+           
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script src="cardHover.js"></script>
 </body>
 </html>

@@ -11,9 +11,15 @@ let num = Math.floor(Math.random() * 79)
 document.getElementById('contenedorCarta').innerHTML = 
 `
 <div class="carta">
+<div class="front">
 <img class="cartaImagen" src='${datosCartas[num].image}'></img>
-<p class="cartaTexto"> ${datosCartas[num].name} <br> ${datosCartas[num].meaning_up} </p>
 </div>
+<div class="back">
+<p> ${datosCartas[num].name} <br> ${datosCartas[num].meaning_up} <br> <br> ${datosCartas[num].meaning_rev}</p>
+</div>
+
+</div>
+
 `;
 
 
