@@ -8,17 +8,28 @@ const datosCartas = datos.cards;
 console.log(datos);
 let num = Math.floor(Math.random() * 79)
 
-document.getElementById('contenedorCarta').innerHTML = 
+document.getElementById('contenedor').innerHTML = 
 `
-<div class="carta">
-<div class="front">
-<img class="cartaImagen" src='${datosCartas[num].image}'></img>
-</div>
-<div class="back">
-<p> ${datosCartas[num].name} <br> ${datosCartas[num].meaning_up} <br> <br> ${datosCartas[num].meaning_rev}</p>
+
+<div id="contenedorCarta">
+
+    <div class="carta">
+        <div class="front">
+            <img class="cartaImagen" src='${datosCartas[num].image}'></img>
+        </div>
+        <div class="back">
+            <p> ${datosCartas[num].name} <br> ${datosCartas[num].meaning_up} <br> <br> ${datosCartas[num].meaning_rev}</p>
+            <div class="boton">
+            <button class="btn" onclick="cargarCartas()">Tirar Carta</button>
+        </div>
+            </div>
+    
+    </div>        
+    
+            
 </div>
 
-</div>
+
 
 `;
 
