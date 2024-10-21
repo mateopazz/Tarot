@@ -13,16 +13,22 @@
     <video autoplay="true" loop="true" muted="true" id="video_background">
   <source src="imagenes/stars.mp4" type="video/mp4" />
 </video/>
-    <div id="contenedor">
+    <div class="contenedor">
         <div class="contenedorTexto">
             <div class="texto">
                 <h1>Tirá tu carta</h1>
+                <p>Mantené apretada la carta para ver su significado</p>
             </div>    
             <div class="boton">
                 <button class="btn" onclick="cargarCartas()">Tirar Carta</button>
             </div>
         </div>
+        
+        <div id="contenedorCarta">
+        </div>
     </div>
+
     <script src="script.js"></script>
+    <script src="cardHover.js"></script>
 </body>
 </html>

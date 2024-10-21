@@ -2,7 +2,19 @@
 *{
     font-family: baskervville SC;
 }
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
 
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 body{
     margin: 0px;
     width: 100%;
@@ -10,42 +22,47 @@ body{
    justify-content: center;
    align-items: center;
     min-height: 100vh;
+    
 }
 
-#contenedor{
+.contenedor{
+    
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
     
+    
 }
 
 .contenedorTexto{
     width: 30%;
-    margin: auto;
-    
     color: gold;
+   
+}
+.contenedorTexto p{
+    font-weight: 100;
+    font-size: larger;
 }
 .texto{
     text-align: center;
-    height: 100px;
     font-weight: bold;
     font-size: larger;
-    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
 }
 .boton{
-    width: 100%;
     text-align: center;
 }
 
 
 .btn{
-    background-color: rgba(0, 0, 0, 0.784);
+    background-color: rgb(33, 33, 87, 0.77);
     color: gold;
     font-weight: bold;
     font-size: larger;
     border: none;
+    width: 10em;
+    height: 2em;
     padding: 5px 20px;
     border-radius: 0.5em;  
 }
@@ -53,18 +70,18 @@ body{
 .btn:hover{
     cursor: pointer;
     background-color: gold;
-    transition: 0.5s ease;
-    color: rgb(0, 0, 149);
+    transition: 0.2s ease;
+    color: rgb(32, 32, 83);
 }
 
 #contenedorCarta{
     width: 340px;
     height: 514px;
+    
     text-align: center;
     margin: auto;
     color: gold;
 }
-
 #video_background {
     position: absolute;
     bottom: 0px;
@@ -76,7 +93,6 @@ body{
     z-index: -1000;
     overflow: hidden;
 }
-
 #video_pattern {
     background:#fff;
     position: fixed;
@@ -86,57 +102,96 @@ body{
     width: 100%;
     height: 100%;
     z-index: 1;
-}
+    }
 
 .carta{
-    padding: 0.5em;
     text-align: center;
+    
+    left: 100px;
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: .6s;
+    transform: rotatex(60deg) translatey(-200px) translatez(-100px) rotatez(30deg);
+    
 }
-
+.carta:hover{
+    transform: rotatex(55deg) translatey(-150px) translatez(-100px) rotatez(20deg);
+}
+.carta:active{
+    transform: rotatex(0deg);
+  transform: rotatez(0deg);
+  transition:.6s;
+}
 .back{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border-radius: 0.5em;
+    border-radius: 2em;
     border: 1px solid;
-    margin: auto;
-}
+    
 
+    margin: auto;
+    font-size: larger;
+    
+
+}
 .cartaImagen{
     width: 340px;
     height: 514px;
     border-radius: 0.5em;
+    box-shadow: 20px 20px 20px rgb(0, 0, 0);
+    transition: .6s;
+    animation: float 3s ease-in-out infinite;
 }
-.front, .back {
-    backface-visibility: hidden;
-}
-
-.front {
-    position: absolute;
-    z-index: 2;
-    transform: rotateY(0deg);
-    transition: all 0.3s linear;
-}
-
-.back {
-    position: absolute;
-    width: 340px;
-    height: 514px;
-    transition: all 0.3s linear;
-    transform: rotateY(180deg);
-    background-color: rgba(0, 0, 0, 0.784);
-}
-
-.back p{
-    padding: 1em;
+.cartaImagen:hover{
+    transition: .6s;
+    box-shadow: 10px 10px 20px black;
     
 }
 
-.carta:hover .front {
-    transform: rotateY(180deg);
-}
+  .front, .back {
+    backface-visibility: hidden;
+  }
   
-.carta:hover .back {
+  .front {
+    
+    position: absolute;
+    
+    
+    z-index: 2;
+
+    transform: rotateY(0deg);
+    transition: all 0.3s linear;
+  }
+  
+  .back {
+    position: absolute;
+    padding: .5em;
+    width: 340px;
+    height: 500px;
+    transition: all 0.3s linear;
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.784);
+    
+  }
+  
+
+  
+  .carta:active .front {
+    transform: rotateY(180deg);
+  }
+  
+  .carta:active .back {
     transform: rotateY(360deg);
+    
+  }
+
+
+.cartaImagen2{
+    width: 35%;
+    transition: all 0.5s ease;
+}
+.cartaImagen2:hover{
+    transform: rotateY(180deg);
 }
