@@ -5,7 +5,6 @@ try{
 
 const datos = await respuesta.json();
 const datosCartas = datos.cards;
-console.log(datos);
 let num = Math.floor(Math.random() * 79)
 
 document.getElementById('contenedorCarta').innerHTML = 
@@ -19,14 +18,17 @@ document.getElementById('contenedorCarta').innerHTML =
 </div>
 
 </div>
-
+<p id="aviso" style="margin-top: 7.5em; font-size: 24px;">Mantené apretada la carta para ver su significado</p>
 `;
 
-
 }
-
 catch(error){
     console.log(error);
 }
 }
+
+
+
+
+
 

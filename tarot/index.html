@@ -5,30 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_downward" />
     
     <title>Document</title>
 </head>
 
 <body>
+    
     <video autoplay="true" loop="true" muted="true" id="video_background">
   <source src="imagenes/stars.mp4" type="video/mp4" />
 </video/>
+
     <div class="contenedor">
+        
         <div class="contenedorTexto">
+            
             <div class="texto">
-                <h1>Tirá tu carta</h1>
-                <p>Mantené apretada la carta para ver su significado</p>
+                <h1>consulta las cartas</h1>
+                <p>ellas te diran cual es tu destino</p>
+                
             </div>    
             <div class="boton">
                 <button class="btn" onclick="cargarCartas()">Tirar Carta</button>
             </div>
+            <div class="mascartas">
+                <p style="margin: auto; text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;">sobre temas puntuales</p>
+            
+                <span class="material-symbols-outlined" style="margin: auto;">
+                arrow_downward
+                </span>
+            <a href="cartasamor.html" style="margin: auto; "><button id="opcion">Más Cartas</button></a>
+            </div>
+            
         </div>
         
         <div id="contenedorCarta">
+            
         </div>
+        
     </div>
 
     <script src="script.js"></script>
-    <script src="cardHover.js"></script>
+    
 </body>
 </html>
